@@ -418,6 +418,7 @@ do i_e = 1,num_elem
   temp_elem_node(c_added_ele,6) = nn(new_orig_node(6))
   temp_elem_node(c_added_ele,7) = temp_added_nodes(5)
   temp_elem_node(c_added_ele,8) = temp_added_nodes(4)
+  temp_elem_mat(c_added_ele)    = elem_mat(i_e)
   !element 2
   c_added_ele = c_added_ele +1
   temp_elem_node(c_added_ele,1) = nn(new_orig_node(2))
@@ -428,6 +429,7 @@ do i_e = 1,num_elem
   temp_elem_node(c_added_ele,6) = nn(new_orig_node(7))
   temp_elem_node(c_added_ele,7) = temp_added_nodes(6)
   temp_elem_node(c_added_ele,8) = temp_added_nodes(5)
+  temp_elem_mat(c_added_ele)    = elem_mat(i_e)
   !element 3
   c_added_ele = c_added_ele +1
   temp_elem_node(c_added_ele,1) = temp_added_nodes(4)
@@ -438,6 +440,7 @@ do i_e = 1,num_elem
   temp_elem_node(c_added_ele,6) = nn(new_orig_node(6))
   temp_elem_node(c_added_ele,7) = nn(new_orig_node(7))
   temp_elem_node(c_added_ele,8) = nn(new_orig_node(8))
+  temp_elem_mat(c_added_ele)    = elem_mat(i_e)
   !element 4
   c_added_ele = c_added_ele +1
   temp_elem_node(c_added_ele,1) = temp_added_nodes(1)
@@ -448,6 +451,7 @@ do i_e = 1,num_elem
   temp_elem_node(c_added_ele,6) = temp_added_nodes(5)
   temp_elem_node(c_added_ele,7) = temp_added_nodes(6)
   temp_elem_node(c_added_ele,8) = temp_added_nodes(7)
+  temp_elem_mat(c_added_ele)    = elem_mat(i_e)
   !Make sure that the determinant detJ is positive 
   if (vertex_case == 2 .or. vertex_case == 6 .or. vertex_case == 7 .or. vertex_case == 8) then
     temp_elem_node_old = temp_elem_node
